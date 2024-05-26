@@ -1,0 +1,1 @@
+Coding assigments for GetHired program
