@@ -3,14 +3,14 @@ console.log("LEVEL 2 ASSIGNMENT: Get Longest Prefix");
 
 const TEST_DATA = {
   arr0: ["hip", "hippie", "hippo"],
-  arrA: ["inside", "in", "into", "indoor", "initiate"],
+  arrA: ["inside", "in", "inso", "insoor", "instiate"],
   arrB: ["ghost", "ghone", "ghoorow"],
   arrC: ["dismantle", "disembark", "mantle", "dislodge"],
   arrD: ["hello", "world", "I", "am", "here"],
   arrE: ["hi", "beehive", "ehi"],
   // ? Edge Cases: empty arr, empty str
   arrEmpty: [],
-  arrEmptyStr: [""],
+  arrEmptyStr: ["yoooo"],
 };
 
 function longestPrefix(arr) {
@@ -21,9 +21,10 @@ function longestPrefix(arr) {
   let isPrefix = true;
   let ltrCnt = 0;
   let checkLtr;
-  while (isPrefix) {
+  while (ltrCnt < arr[0].length && isPrefix) {
     checkLtr = arr[0][ltrCnt];
-    for (let i = 0; i < arr.length; i++) {
+    // console.log(checkLtr, ltrCnt);
+    for (let i = 0; i < arr.length && isPrefix; i++) {
       if (ltrCnt === arr[i].length || arr[i][ltrCnt] !== checkLtr) {
         isPrefix = false;
       }
