@@ -1,5 +1,5 @@
 const token =
-  "BQA-jSb3DOBBJRECBqALU4r6ECSKiLlC-d7gZw6MexM-j1cbyRGeA0SrYYs-OVHB55G5dqItDq7BGwsY5oXuBRjyUfA17GOfNSY8XoDf6Mzag8vu794";
+  "generate new token...";
 
 async function fetchWebApi(endpoint, method) {
   const res = await fetch(`https://api.spotify.com/v1${endpoint}`, {
